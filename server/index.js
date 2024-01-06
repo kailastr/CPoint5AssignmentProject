@@ -1,5 +1,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
+const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const DBConnection = require("./DB.Connection");
 
@@ -8,6 +10,10 @@ const ItemModel = require('./GroceryItemModel');
 dotenv.config();
 
 const app = express();
+
+app.use(cors());
+
+app.use(bodyParser.json());
 
 app.use(express.json());
 
@@ -48,10 +54,11 @@ app.get('/', async (req, res) => {
  * Params:      none
  */
 app.post('/items', async (req, res) => {
+    console.log(req.body)
 
     try {
 
-        const { data } = req.body;
+        const data = req.body;
 
         if (!data) {
             return res.status(404).json({

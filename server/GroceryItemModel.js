@@ -12,15 +12,15 @@ const ItemSchema = new Schema({
         required: false
     },
     price: {
-        type: Number,
+        type: String,
         required: true
     },
     IsQuantityInWeight: {
-        type: Boolean,
+        type: String,
         required: true
     },
     quantity: {
-        type: Number,
+        type: String,
         required: true
     },
     description: {

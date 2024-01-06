@@ -1,7 +1,7 @@
-# CPoint5AssignmentProject
+# CPoint5 Assignment Project
 
 ## Description
-Assignment inventory management project for CPoint-5
+An assignment project of inventory management for the company CPoint-5 using **MERN** stack
 
 ## Files Arrangement
 
